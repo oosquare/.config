@@ -1,0 +1,17 @@
+map ,c h```<CR><Esc>A
+map ,b h****<%%><Esc>5jh
+map ,i h**<%%><Esc>4jh
+map ,m h******<%%><Esc>6jh
+map ,r h><Space><CR><CR><%%><Esc>2iA
+map ,ei a$$<%%><Esc>4jh
+map ,el a$$<CR><CR>$$<CR><%%><Esc>2ih
+map ,1 h#<Space><CR><%%><Esc>iA
+map ,2 h##<Space><CR><%%><Esc>iA
+map ,3 h###<Space><CR><%%><Esc>iA
+map ,4 h####<Space><CR><%%><Esc>iA
+map ,5 h#####<Space><CR><%%><Esc>iA
+map ,6 h######<Space><CR><%%><Esc>iA
+map ,l h----<CR>
+map ,p a[]()<%%><Esc>6jh
+map ,a a![]()<%%><Esc>6jh
+map ,f f<c4l
