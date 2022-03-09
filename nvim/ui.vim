@@ -1,18 +1,16 @@
-" View
+" Basic UI
 syntax on
 set number
+set relativenumber
 set cursorline
-set rnu
 set wrap
 set showcmd
 set wildmenu
 set scrolloff=5
 
-" Syntax
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set autoindent
-
+let &t_ut=''
 " Color scheme
-colorscheme monokai
+set background=dark
+let g:solarized_termcolors = 16
+let g:solarized_termtrans = 1
+colorscheme solarized
