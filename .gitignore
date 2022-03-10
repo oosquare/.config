@@ -2,4 +2,5 @@
 *.exe
 *.out
 .DS_Store
-
+coc
+node_modules

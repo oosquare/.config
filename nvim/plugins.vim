@@ -14,6 +14,9 @@ Plug 'sickill/vim-monokai'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
+" coc.nvim
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 " ===
@@ -35,3 +38,13 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>1)
 
 map gf :Files<CR>
 map gs :RG<CR>
+
+" ===
+" === coc.nvim
+" ===
+
+let g:coc_global_extensions = [
+    \ 'coc-clangd',
+    \ 'coc-markdown-preview-enhanced',
+    \ 'coc-marketplace'
+    \ ]

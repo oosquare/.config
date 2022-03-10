@@ -1,4 +1,10 @@
 " ===
+" === Leader key
+" ===
+
+let mapleader="\<space>"
+
+" ===
 " === Direction Keys
 " ===
 
@@ -78,6 +84,6 @@ exec "nohlsearch"
 " === Goto operations
 " ===
 
-" gi to go into file, gb to go back
-noremap gi gf
+" gp to go into file, gb to go back
+noremap gp gf
 map gb <C-O>
