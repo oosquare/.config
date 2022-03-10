@@ -20,7 +20,6 @@ map S :w<CR>
 map s <nop>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
-map <C-p> <Esc>:e 
 
 " ===
 " === Tabs
@@ -28,6 +27,7 @@ map <C-p> <Esc>:e
 map tn :tabe<CR>
 map tj :-tabnext<CR>
 map tl :+tabnext<CR>
+map tt gt
 
 " ===
 " === Layout
@@ -63,7 +63,7 @@ map m<Down> <C-w>J
 " === Searching
 " ===
 
-" n for finding the next target, N for finding the previous target
+" n for finding the next target, N for finding the previous one
 " zz for making target in the center of current window
 noremap n nzz
 noremap N Nzz
@@ -73,3 +73,11 @@ set incsearch
 set ignorecase
 set smartcase
 exec "nohlsearch"
+
+" ===
+" === Goto operations
+" ===
+
+" gi to go into file, gb to go back
+noremap gi gf
+map gb <C-O>
