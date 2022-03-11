@@ -9,6 +9,7 @@ Plug 'jiangmiao/auto-pairs'
 " Color schemes
 Plug 'tomasr/molokai'
 Plug 'sickill/vim-monokai'
+Plug 'ayu-theme/ayu-vim'
 
 " FZF support
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
