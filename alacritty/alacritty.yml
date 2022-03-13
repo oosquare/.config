@@ -9,7 +9,7 @@
 # All imports must either be absolute paths starting with `/`, or paths relative
 # to the user's home directory starting with `~/`.
 import:
-  - ~/.config/alacritty/themes/tokyo-night.yml
+  - /home/ctj12461/.config/alacritty/themes/tokyo-night.yml
 
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
@@ -240,8 +240,6 @@ font:
     #bar:
     #  background: '#c5c8c6'
     #  foreground: '#1d1f21'
-
-colors: *tokyo-night
 
   # Keyboard regex hints
   #hints:
