@@ -84,6 +84,5 @@ exec "nohlsearch"
 " === Goto operations
 " ===
 
-" gp to go into file, gb to go back
-noremap gp gf
+" gb to go back
 map gb <C-O>

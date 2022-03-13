@@ -1,6 +1,29 @@
-*cache*
-*.exe
-*.out
-.DS_Store
-coc
-node_modules
+# Ignore all files and directories by default
+*
+
+# These files or directories above are essential to be restored.
+
+# ===
+# === ranger
+# ===
+
+# ranger/
+
+# ===
+# === nvim
+# ===
+
+# nvim/
+
+# ===
+# === alacritty
+# ===
+
+# alacritty/
+
+
+# ===
+# === mume, required by coc-markdown-preview-enhanced
+# ===
+
+# mume/

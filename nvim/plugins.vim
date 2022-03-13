@@ -7,9 +7,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
 
 " Color schemes
-Plug 'tomasr/molokai'
-Plug 'sickill/vim-monokai'
-Plug 'ayu-theme/ayu-vim'
+" Plug 'tomasr/molokai'
+" Plug 'sickill/vim-monokai'
+" Plug 'ayu-theme/ayu-vim'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " FZF support
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -37,7 +38,7 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>1)
 
-map gf :Files<CR>
+map gp :Files<CR>
 map gs :RG<CR>
 
 " ===
@@ -46,6 +47,8 @@ map gs :RG<CR>
 
 let g:coc_global_extensions = [
     \ 'coc-clangd',
+    \ 'coc-webview',
     \ 'coc-markdown-preview-enhanced',
-    \ 'coc-marketplace'
+    \ 'coc-marketplace',
+    \ 'coc-yaml'
     \ ]

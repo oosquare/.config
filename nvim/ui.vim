@@ -9,9 +9,8 @@ set wildmenu
 set scrolloff=5
 
 let &t_ut=''
+
 " Color scheme
-" set background=dark
-" let g:solarized_termcolors = 16
-" let g:solarized_termtrans = 1
-let ayucolor="mirage"
-colorscheme ayu
+let g:tokyonight_style="night"
+let g:tokyonight_transparent=1
+colorscheme tokyonight
