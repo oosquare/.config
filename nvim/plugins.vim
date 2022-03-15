@@ -1,4 +1,6 @@
-" Plugins
+" ===
+" === Load Plugins
+" ===
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'scrooloose/nerdtree'
@@ -12,17 +14,20 @@ Plug 'jiangmiao/auto-pairs'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
-" FZF support
+" fzf.vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
 " coc.nvim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Markdown
+Plug 'plasticboy/vim-markdown'
+
 call plug#end()
 
 " ===
-" === FZF settings
+" === fzf.vim
 " ===
 
 command! -bang -nargs=? -complete=dir Files
@@ -38,8 +43,8 @@ endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>1)
 
-map gp :Files<CR>
-map gs :RG<CR>
+map gp :tabe<CR>:Files<CR>
+map gs :tabe<CR>:RG<CR>
 
 " ===
 " === coc.nvim
@@ -52,3 +57,11 @@ let g:coc_global_extensions = [
     \ 'coc-marketplace',
     \ 'coc-yaml'
     \ ]
+
+
+" ===
+" === Markdown
+" ===
+
+let g:vim_markdown_math = 1
+
