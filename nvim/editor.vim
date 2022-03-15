@@ -51,6 +51,5 @@ function! Fcitx5_to_zh()
    endif
 endfunction
 
-set timeoutlen=150
 autocmd InsertLeave * call Fcitx5_to_en()
 autocmd InsertEnter * call Fcitx5_to_zh()
