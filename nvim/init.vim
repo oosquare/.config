@@ -9,6 +9,5 @@
 source ~/.config/nvim/editor.vim
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/basic.vim
-source ~/.config/nvim/coc-setting.vim
 source ~/.config/nvim/ui.vim
 source ~/.config/nvim/markdown.vim

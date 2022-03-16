@@ -3,9 +3,11 @@
 " ===
 call plug#begin('~/.config/nvim/plugged')
 
-Plug 'scrooloose/nerdtree'
+" Status Bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Brackets Pairing
 Plug 'jiangmiao/auto-pairs'
 
 " Color schemes
@@ -14,37 +16,19 @@ Plug 'jiangmiao/auto-pairs'
 " Plug 'ayu-theme/ayu-vim'
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
-" fzf.vim
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
-
 " coc.nvim
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 
 " Markdown
 Plug 'plasticboy/vim-markdown'
 
+" Comments
+Plug 'tpope/vim-commentary'
+
+" Indent Line
+Plug 'Yggdroot/indentLine'
+
 call plug#end()
-
-" ===
-" === fzf.vim
-" ===
-
-command! -bang -nargs=? -complete=dir Files
-    \ call fzf#vim#files('.', fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>1)
-
-function! RipgrepFzf(query, fullscreen)
-  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case -- %s || true'
-  let initial_command = printf(command_fmt, shellescape(a:query))
-  let reload_command = printf(command_fmt, '{q}')
-  let spec = {'options': ['--layout=reverse', '--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
-  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
-endfunction
-
-command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>1)
-
-map gp :tabe<CR>:Files<CR>
-map gs :tabe<CR>:RG<CR>
 
 " ===
 " === coc.nvim
@@ -55,13 +39,29 @@ let g:coc_global_extensions = [
     \ 'coc-webview',
     \ 'coc-markdown-preview-enhanced',
     \ 'coc-marketplace',
-    \ 'coc-yaml'
+    \ 'coc-yaml',
+    \ 'coc-lists'
     \ ]
 
+source ~/.config/nvim/coc-setting.vim
 
 " ===
-" === Markdown
+" === vim-markdown
 " ===
 
 let g:vim_markdown_math = 1
 
+
+" ===
+" === vim-commentary
+" ===
+
+autocmd FileType python,shell set commentstring=#\ %s
+autocmd FileType java,c,cpp set commentstring=//\ %s
+
+
+" ===
+" === indentLine
+" ===
+
+let g:indentLine_char = '│'
