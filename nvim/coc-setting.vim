@@ -59,6 +59,6 @@ if has('nvim-0.4.0') || has('patch-8.2.0750')
   vnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
 endif
 
-map gp :tabe<CR>:CocList files<CR>
-map gs :CocList symbols<CR>
+map gp :tabe<CR>:CocList --auto-preview files<CR>
+map gs :CocList --interactive --auto-preview symbols<CR>
 map gw :CocList words<CR>
