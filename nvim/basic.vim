@@ -1,13 +1,3 @@
-" ===
-" === Leader key
-" ===
-
-let mapleader="\<space>"
-
-" ===
-" === Direction Keys
-" ===
-
 " Replace hjkl with ijkl for convenience
 noremap i k
 noremap j h

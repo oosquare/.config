@@ -399,7 +399,7 @@ cursor:
     #   - Off: Disable blinking by default
     #   - On: Enable blinking by default
     #   - Always: Force the cursor to always blink
-    blinking: Always
+    blinking: Never
 
   # Vi mode cursor style
   #

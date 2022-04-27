@@ -28,6 +28,9 @@ Plug 'tpope/vim-commentary'
 " Indent Line
 Plug 'Yggdroot/indentLine'
 
+" Multiple cursors
+Plug 'mg979/vim-visual-multi'
+
 call plug#end()
 
 " ===
